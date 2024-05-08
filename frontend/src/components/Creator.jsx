@@ -23,13 +23,13 @@ function Creator(props) {
   }
 
   function submitNote(event) {
+    axiosPostData();
     props.onAdd(note);
     setNote({
       title: "",
       content: "",
     });
     event.preventDefault();
-    axiosPostData();
   }
 
   return (
